@@ -1,0 +1,115 @@
+body{
+    background-color: rgb(90, 84, 84);
+}
+
+canvas {
+    border: 2px solid black;
+    margin-top: 10px;
+    margin: auto;
+    max-width: 1000px;
+    min-width: 600px;
+    height: auto;
+}
+
+#header{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+#trenutnaCena {
+    background-color: rgba(8, 247, 100, 0.344);
+    text-align: center;
+    right: 10px;
+    width: 20%;
+    height: 30px;
+    padding-top: 10px;
+    margin-top: 10px;
+    border: solid 2px rgb(2, 100, 15);
+    font-size: 20px;
+    color: rgb(3, 89, 3);
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    display: inline-block;
+}
+
+#dugme {
+    background-color: blue;
+    width: 100px;
+    border: 2px solid rgb(5, 5, 204);
+    color: white;
+    font-weight: 600;
+    height: 30px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 19px;
+}
+
+#dugme:hover{
+    border: solid 4px rgb(1, 1, 194);
+    font-weight: 300;
+}
+
+#period{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    margin-left: 3px;
+}
+label{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#datum{
+    width: 150px;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    display: inline-block;
+}
+
+p{
+    font-size: 15px;
+    position: relative;
+    background-color: rgba(62, 61, 59, 0.414);
+    text-align: center;
+}
+
+
+#selecter{
+    position: relative;
+    top: 7px;
+    height: 20px;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    font-family: sans-serif
+    
+}
+
+#prvi {
+    flex: 1;
+    background-color: blueviolet;
+    text-align: center;
+    width: 50%;
+    margin-right: 3px;
+}
+
+#drugi{
+    flex: 1;
+    text-align: center;
+    width: 50%;
+    background-color: blueviolet;
+    margin-left: 3px;
+}
+

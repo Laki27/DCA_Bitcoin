@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NASLOV</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </head>
+    <body>
+        <div id="header">
+            <input type="date" id="datum">
+            <input type="number" id="period" min="1" max="30" value="1"> <label>Period</label>
+            <button id="dugme" onclick="readDate()">SELECT</button>
+            <div id="trenutnaCena"></div>
+        </div>
+        <p id="paragraf">BUY FOR 100$ EACH TIME</p>
+        <canvas id="myChart" width="720px" height="405px" style="display: none;"></canvas>
+        <canvas id="yourChart" width="720px" height="405px"></canvas>
+
+        <div id="selecter">
+            <div id="prvi">Price in $</div>
+            <div id="drugi" style="border: 2px solid purple;">Price m2 in BTC</div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
