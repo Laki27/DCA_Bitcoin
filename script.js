@@ -78,7 +78,7 @@ async function getPriceFromStartDate(br_iteracija){ //1
         var price = await getPirceForDate(dates[i]); //2 za svaki datum cena
         prices.push(price);
         kupljeno+=100/price;
-        paragraf.textContent=`UCITANO: ${i+1}/${br_iteracija}`
+        paragraf.textContent=`LOADING... ${i+1}/${br_iteracija}`
     }
     paragraf.textContent=`Bought ${kupljeno.toFixed(8)} for ${br_iteracija*100}$ now worth ${(kupljeno*trenutna_cena_float).toFixed(2)}`;
     var ctx = canvas.getContext('2d');
