@@ -80,8 +80,7 @@ async function getPriceFromStartDate(br_iteracija){ //1
         kupljeno+=100/price;
         paragraf.textContent=`UCITANO: ${i+1}/${br_iteracija}`
     }
-    paragraf.textContent=`Kupljeno ${kupljeno.toFixed(8)} za ${br_iteracija*100} koji sada vrede ${(kupljeno*trenutna_cena_float).toFixed(2)}`;
-    
+    paragraf.textContent=`Bought ${kupljeno.toFixed(8)} for ${br_iteracija*100}$ now worth ${(kupljeno*trenutna_cena_float).toFixed(2)}`;
     var ctx = canvas.getContext('2d');
     myChart = new Chart(ctx, {
     type: 'line',  // Tip grafikona (može biti 'bar', 'line', 'pie', itd.)
@@ -157,6 +156,11 @@ levi_selektor.addEventListener('click', function(){
     desni_selektor.style.border = '';
     canvas.style.display = 'block';
     canvas2.style.display='none';
+    if(!myChart){
+        paragraf.textContent='Buy for 100$ each time';
+    } else {
+        paragraf.textContent=`Bought ${kupljeno.toFixed(8)} for ${dates.length*100}$ now worth ${(kupljeno*trenutna_cena_float).toFixed(2)}`;
+    }
 })
 
 desni_selektor.addEventListener('click', function(){
@@ -164,4 +168,5 @@ desni_selektor.addEventListener('click', function(){
     levi_selektor.style.border = '';
     canvas2.style.display = 'block';
     canvas.style.display='none';
+    paragraf.textContent='The average price of m2 in Belgrade by the quarters in BTC';
 })

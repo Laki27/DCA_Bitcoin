@@ -9,14 +9,17 @@
     </head>
     <body>
         <div id="header">
+            <label>Start date:</label>
             <input type="date" id="datum">
-            <input type="number" id="period" min="1" max="30" value="1"> <label>Period</label>
+            <label>Frequency days:</label>
+            <input type="number" id="period" min="1" max="30" value="1"> 
             <button id="dugme" onclick="readDate()">SELECT</button>
             <div id="trenutnaCena"></div>
         </div>
-        <p id="paragraf">BUY FOR 100$ EACH TIME</p>
-        <canvas id="myChart" width="720px" height="405px" style="display: none;"></canvas>
+        <p id="paragraf">The average price of m2 in Belgrade by the quarters in BTC</p>
+       
         <canvas id="yourChart" width="720px" height="405px"></canvas>
+        <canvas id="myChart" width="720px" height="405px" style="display: none;"></canvas>
 
         <div id="selecter">
             <div id="prvi">Price in $</div>

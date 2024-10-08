@@ -5,10 +5,11 @@ body{
 canvas {
     border: 2px solid black;
     margin-top: 10px;
-    margin: auto;
     max-width: 1000px;
     min-width: 600px;
     height: auto;
+    margin-left: 10%;
+    margin: auto;
 }
 
 #header{
@@ -45,7 +46,7 @@ canvas {
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 19px;
 }
 
@@ -63,15 +64,17 @@ canvas {
     margin-left: 3px;
 }
 label{
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 25px;
+    font-size: 15px;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
 }
 #datum{
     width: 150px;
     height: 30px;
     margin-top: 15px;
+    margin-left: 10px;
     font-size: 15px;
     border-radius: 10px;
     background-color: whitesmoke;
@@ -112,4 +115,5 @@ p{
     background-color: blueviolet;
     margin-left: 3px;
 }
+
 
