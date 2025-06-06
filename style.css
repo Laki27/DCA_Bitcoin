@@ -4,12 +4,11 @@ body{
 
 canvas {
     border: 2px solid black;
-    margin-top: 10px;
+    
     max-width: 1000px;
     min-width: 600px;
-    height: auto;
-    margin-left: 10%;
-    margin: auto;
+    margin: auto !important;
+    width:60% !important
 }
 
 #header{

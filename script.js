@@ -1,5 +1,4 @@
 var podaci = [0.6901, 0.1221, 0.2752, 0.4895, 0.1745, 0.2537, 0.2145, 0.0745, 0.0637, 0.0469, 0.1042, 0.1346, 0.0802, 0.0581, 0.0341]
-var probni = [0.6901, 0.1221, 0.2752, 0.4895, 0.1745, 0.2537, 0.2145, 0.0745, 0.0637, 0.0469, 0.1042, 0.1346, 0.0802, 0.0581, 0.0341]
 var kvartali=['JUN2017', 'DEC2017', 'JUN2018', 'DEC2018', 'JUN2019', 'DEC2019', 'JUN2020', 'DEC2020', 'JUN2021', 'DEC2021', 'JUN2022', 'DEC2022', 'JUN2023', 'DEC2023', 'MART2024'];
 
 var datumi =[];
@@ -74,6 +73,7 @@ console.log(paragraf)
 async function getPriceFromStartDate(br_iteracija){ //1
     prices=[];
     let i=0;
+    kupljeno = 0;
     for (i=0; i<br_iteracija; i++){
         var price = await getPirceForDate(dates[i]); //2 za svaki datum cena
         prices.push(price);
@@ -95,6 +95,7 @@ async function getPriceFromStartDate(br_iteracija){ //1
         }]
     },
     options: {
+        responsive: true,
         scales: {
             y: {
                 beginAtZero: false  // Postavljanje početne vrednosti Y-ose na 0
@@ -107,6 +108,13 @@ async function getPriceFromStartDate(br_iteracija){ //1
 }
 
 const period = document.getElementById('period');
+period.value = 7;
+
+const dateInput = document.getElementById('datum');
+danas = new Date();
+danas.setDate(danas.getDate() - 70);
+dateInput.value = danas.toISOString().split('T')[0];
+
 function readDate(){ //nakon sto se klikne
     if(myChart){
         myChart.destroy();
@@ -114,6 +122,7 @@ function readDate(){ //nakon sto se klikne
         dates_str=[];
         console.log("UNISTIO SAM")
     }
+    
     const dateInput = document.getElementById('datum');
     console.log(typeof(period.value))
     dates = getDateArray(dateInput.value, parseInt(period.value)); // nizDatuma
@@ -123,6 +132,8 @@ function readDate(){ //nakon sto se klikne
     
     getPriceFromStartDate(dates.length); //1 pocinjemo crtanje za niz datuma
 }
+
+readDate()
 
 var canvas2
 var myChart2
@@ -141,6 +152,7 @@ myChart2 = new Chart(ctx2, {
         }]
     },
     options: {
+        responsive: true,
         scales: {
             y: {
                 beginAtZero: false  // Postavljanje početne vrednosti Y-ose na 0
